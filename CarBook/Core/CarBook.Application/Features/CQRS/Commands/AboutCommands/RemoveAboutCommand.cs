@@ -2,11 +2,10 @@
 {
     public class RemoveAboutCommand
     {
-        public RemoveAboutCommand(int aboutID)
+        public int Id { get; set; }
+        public RemoveAboutCommand(int id)
         {
-            AboutID = aboutID;
+            Id = id;
         }
-
-        public int AboutID { get; set; }
     }
 }

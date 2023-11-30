@@ -2,11 +2,11 @@
 {
     public class RemoveBannerCommand
     {
-        public RemoveBannerCommand(int bannerID)
-        {
-            BannerID = bannerID;
-        }
+        public int Id { get; set; }
 
-        public int BannerID { get; set; }
+        public RemoveBannerCommand(int id)
+        {
+            Id = id;
+        }
     }
 }

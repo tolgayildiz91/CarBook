@@ -8,24 +8,21 @@ namespace CarBook.Application.Features.CQRS.Handlers.BannerHandlers
     public class GetBannerByIdQueryHandler
     {
         private readonly IRepository<Banner> _repository;
-
         public GetBannerByIdQueryHandler(IRepository<Banner> repository)
         {
             _repository = repository;
         }
-
         public async Task<GetBannerByIdQueryResult> Handle(GetBannerByIdQuery query)
         {
             var values = await _repository.GetByIdAsync(query.Id);
             return new GetBannerByIdQueryResult
             {
                 BannerID = values.BannerID,
-                VideoUrl = values.VideoUrl,
-                VideoDescription = values.VideoDescription,
                 Description = values.Description,
-                Title = values.Title
+                Title = values.Title,
+                VideoDescription = values.VideoDescription,
+                VideoUrl = values.VideoUrl
             };
         }
-
     }
 }

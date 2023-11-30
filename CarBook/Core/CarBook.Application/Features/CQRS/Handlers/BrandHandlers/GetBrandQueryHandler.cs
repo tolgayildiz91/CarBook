@@ -7,13 +7,10 @@ namespace CarBook.Application.Features.CQRS.Handlers.BrandHandlers
     public class GetBrandQueryHandler
     {
         private readonly IRepository<Brand> _repository;
-
         public GetBrandQueryHandler(IRepository<Brand> repository)
         {
             _repository = repository;
         }
-
-
         public async Task<List<GetBrandQueryResult>> Handle()
         {
             var values = await _repository.GetAllAsync();
@@ -22,7 +19,6 @@ namespace CarBook.Application.Features.CQRS.Handlers.BrandHandlers
                 BrandID = x.BrandID,
                 Name = x.Name
             }).ToList();
-
         }
     }
 }

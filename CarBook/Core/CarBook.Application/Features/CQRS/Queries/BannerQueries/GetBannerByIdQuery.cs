@@ -2,11 +2,10 @@
 {
     public class GetBannerByIdQuery
     {
+        public int Id { get; set; }
         public GetBannerByIdQuery(int id)
         {
             Id = id;
         }
-
-        public int Id { get; set; }
     }
 }
