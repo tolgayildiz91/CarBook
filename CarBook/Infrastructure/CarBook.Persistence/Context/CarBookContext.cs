@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarBook.Persistence.Context
 {
-    public class CarBookContext:DbContext
+    public class CarBookContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
