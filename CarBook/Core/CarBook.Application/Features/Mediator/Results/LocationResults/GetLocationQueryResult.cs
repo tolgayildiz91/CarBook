@@ -11,3 +11,4 @@ namespace CarBook.Application.Features.Mediator.Results.LocationResults
         public string LocationID { get; set; }
         public string Name { get; set; }
     }
+}
