@@ -24,14 +24,6 @@ namespace CarBook.WebApi.Controllers
             var values = await _mediator.Send(new GetSocialMediaQuery());
             return Ok(values);
         }
-
-        [HttpGet]
-        public async Task<IActionResult> Tolga()
-        {
-            var values = await _mediator.Send(new GetSocialMediaQuery());
-            return Ok(values);
-        }
-
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSocialMedia(int id)
         {
