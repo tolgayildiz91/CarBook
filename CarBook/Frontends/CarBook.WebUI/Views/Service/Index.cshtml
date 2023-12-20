@@ -4,5 +4,6 @@
     Layout = "~/Views/UILayout/Index.cshtml";
 }
 
-<h1>Hizmetler</h1>
+@await Component.InvokeAsync("_ServiceComponentPartial")
 
+@await Component.InvokeAsync("_BecomeADriverComponentPartial")

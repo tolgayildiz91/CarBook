@@ -16,23 +16,23 @@ namespace CarBook.Application.Features.CQRS.Handlers.CarHandlers
         {
             _repository = repository;
         }
-        //public List<GetCarWithBrandQueryResult> Handle()
-        //{
-        //    var values = _repository.GetLast5CarsWithBrands();
-        //    return values.Select(x => new GetCarWithBrandQueryResult
-        //    {
-        //        BrandName = x.Brand.Name,
-        //        BrandID = x.BrandID,
-        //        BigImageUrl = x.BigImageUrl,
-        //        CarID = x.CarID,
-        //        CoverImageUrl = x.CoverImageUrl,
-        //        Fuel = x.Fuel,
-        //        Km = x.Km,
-        //        Luggage = x.Luggage,
-        //        Model = x.Model,
-        //        Seat = x.Seat,
-        //        Transmission = x.Transmission
-        //    }).ToList();
-        //}
+        public List<GetCarWithBrandQueryResult> Handle()
+        {
+            var values = _repository.GetLast5CarsListWithBrands();
+            return values.Select(x => new GetCarWithBrandQueryResult
+            {
+                BrandName = x.Brand.Name,
+                BrandID = x.BrandID,
+                BigImageUrl = x.BigImageUrl,
+                CarID = x.CarID,
+                CoverImageUrl = x.CoverImageUrl,
+                Fuel = x.Fuel,
+                Km = x.Km,
+                Luggage = x.Luggage,
+                Model = x.Model,
+                Seat = x.Seat,
+                Transmission = x.Transmission
+            }).ToList();
+        }
     }
 }
