@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Persistence.Repositories.CarRepositories
+namespace CarBook.Persistence.Repositories.BlogRepositories
 {
     public class BlogRepository : IBlogRepository
     {
@@ -22,7 +22,7 @@ namespace CarBook.Persistence.Repositories.CarRepositories
 
         public List<Blog> GetLast3BlogsWithAuthors()
         {
-            var values = _context.Blogs.Include(x => x.Author).OrderByDescending(x=>x.BlogID).Take(3).ToList();
+            var values = _context.Blogs.Include(x => x.Author).OrderByDescending(x => x.BlogID).Take(3).ToList();
             return values;
         }
     }
