@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Queries.TagCloudQueries
 {
-    public class GetTagCloudByBlogIdQuery:IRequest<GetTagCloudByBlogIdQueryResult>
+    public class GetTagCloudByBlogIdQuery:IRequest<List<GetTagCloudByBlogIdQueryResult>>
     {
         public int Id { get; set; }
 
